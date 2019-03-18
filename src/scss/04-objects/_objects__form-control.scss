@@ -1,0 +1,81 @@
+/*-------------------------------------------------------------
+	#FORM-CONTROL
+-----------------------------------------------------------------*/
+
+@if $include__form-control == true {
+
+	$form-control__position: relative !default;
+	$form-control__margin-bottom: 20 !default;
+	$form-control__colours: danger info success;
+
+	.o-form-control,
+	%form-control {
+		position: $form-control__position;
+		margin-bottom: $form-control__margin-bottom+px;
+
+		&__label {
+			display: inline-block;
+			font-size: 12px;
+			font-weight: bold;
+			line-height: (14 + 8)+px;
+			cursor: pointer;
+		}
+		&__msg {
+			display: none;
+			position: absolute;
+			top: 100%;
+			width: 100%;
+			font-size: 12px;
+			line-height: (12 + 8)+px;
+			@include truncate();
+		}
+		&__input {
+			position: relative;
+
+			/**
+			* Actions
+			*/
+
+			&:active:not(:disabled),
+			&:focus:not(:disabled) {
+				outline: 0;
+				border-color: color(primary);
+				@include box-shadow(0 0 0 3px color(primary,0.5));
+			}
+	
+			/**
+			* Disabled
+			*/
+	
+			&:disabled,
+			&:read-only {
+				background-color: color(disabled);
+				border-color: color(default);
+			}
+		}
+		
+		/**
+		 * Modifiers
+		 */
+
+		@each $color in $form-control__colours {
+			&--#{$color} {
+				.o-form-control__input,
+				%form-control__input {
+					background-color: color(#{$color}-light,0.2);
+					border-color: color(#{$color});
+					&:active:not(:disabled),
+					&:focus:not(:disabled) {
+						border-color: color(#{$color});
+						@include box-shadow(0 0 0 3px color(#{$color}, 0.5));
+					}
+				}
+				.o-form-control__msg,
+				%form-control__msg {
+					display: block;
+					color: color(#{$color});
+				}
+			}
+		}
+	}
+}

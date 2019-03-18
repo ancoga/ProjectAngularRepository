@@ -1,0 +1,21 @@
+///
+/// SIDEBAR component
+///
+/// Sidebar of the repository
+///
+/// @access public
+/// @author WebLab Studio
+/// @group Component
+/// @name Sidebar
+/// @since version 1.0.0
+///
+.#{$setting__ns}sidebar {
+	position: fixed;
+	display: block;
+	width: 300px;
+	height: calc(100vh - 60px);
+	top: 60px;
+	left: 0;
+	background-color: color(gray-50);
+	@include box-shadow(2px 2px 5px color(black,0.1));
+}

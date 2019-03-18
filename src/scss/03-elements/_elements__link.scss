@@ -1,0 +1,10 @@
+///
+/// LINK element
+///
+/// This is the link' style sheet
+///
+a {
+	&:hover,&:focus,&:active {
+		text-decoration: none;
+	}
+}

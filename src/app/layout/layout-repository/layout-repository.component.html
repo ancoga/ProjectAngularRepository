@@ -1,0 +1,59 @@
+<p-progressBar class="wl-progressbar" mode="indeterminate" *ngIf="progressbar"></p-progressBar>
+<header class="wl-header">
+	<div class="wl-header__container">
+		<div class="wl-header__row">
+			<div class="wl-header__col">
+				<span class="wl-header__title o-title o-title--h5 o-title--light">WebLab repository</span>
+			</div>
+			<div class="wl-header__col">
+
+			</div>
+		</div>
+	</div>
+</header>
+<aside class="wl-sidebar">
+	<div class="wl-user-info">
+		<figure class="wl-user-info__img">
+			<img [src]="userData.img" alt="..." />
+		</figure>
+		<div class="wl-user-info__container">
+			<span class="wl-user-info__title" [innerHTML]="userData.nick"></span>
+			<span class="wl-user-info__subtitle" [innerHTML]="userData.email"></span>
+		</div>
+	</div>
+	<div class="wl-menu">
+		<span class="wl-menu__title">LIST OF COMPONENTS</span>
+		<ul class="wl-menu__list">
+			<li class="wl-menu__item" *ngFor="let menu of listMenu">
+				<a [routerLink]="[menu.routerLink]" class="wl-menu__link" routerLinkActive="wl-menu__link--active" *ngIf="menu.routerLink">
+					<i class="wl-menu__link-icon material-icons" [innerHTML]="menu.icon"></i>
+					<span class="wl-menu__link-txt" [innerHTML]="menu.name"></span>
+				</a>
+				<button class="wl-menu__link" type="button" (click)="menu.active = !menu.active" *ngIf="!menu.routerLink" [ngClass]="{'wl-menu__link--active' : menu.active}">
+					<i class="wl-menu__link-icon material-icons" [innerHTML]="menu.icon"></i>
+					<span class="wl-menu__link-txt" [innerHTML]="menu.name"></span>
+					<div class="wl-menu__icon">
+						<i class="wl-menu__icon-add material-icons" [ngClass]="{'wl-menu__icon-add--active' : !menu.active}">add</i>
+						<i class="wl-menu__icon-remove material-icons" [ngClass]="{'wl-menu__icon-remove--active' : menu.active}">remove</i>
+					</div>
+				</button>
+				<!-- LEVEL 2 -->
+				<ul class="wl-menu__submenu" *ngIf="menu.submenu" [ngClass]="{'wl-menu__submenu--show': menu.active}">
+					<li class="wl-menu__submenu-item" *ngFor="let submenu of menu.submenu">
+						<a [routerLink]="[submenu.routerLink]" class="wl-menu__link" routerLinkActive="wl-menu__link--active">
+							<span class="wl-menu__link-subtxt" [innerHTML]="submenu.name"></span>
+						</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+</aside>
+<main class="wl-main">
+	<router-outlet></router-outlet>
+	<footer class="wl-website-footer">
+			<div class="ui-g">
+				<div class="ui-g-6">WebLab Repository 1.0.0</div>
+			</div>
+		</footer>
+</main>

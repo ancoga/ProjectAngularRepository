@@ -1,0 +1,80 @@
+/*-------------------------------------------------------------
+	#TEXT
+-----------------------------------------------------------------*/
+
+@if $include__text == true {
+
+
+	$text__font-family				:	$setting__base-font-family  !default;
+	$text__font-weight				:	400                         !default;
+	$text__color					:	color(black)              !default;
+	$text__line-height				:	1.5							!default;
+	$increment__line-height			:	8							!default;
+	$text__size: (
+		xs:	10,
+		sm: 12,
+		md: 14,
+		lg: 16,
+		xl: 18
+	);
+	$text__colours: danger primary success warning info default;
+	$text__weight: (
+		thin	: 100,
+		light	: 300,
+		regular	: 400,
+		medium	: 500,
+		bold	: 700,
+		black	: 900
+	);
+
+
+	.o-text,
+	%text {
+		font-family				:	$text__font-family;
+		font-weight				:	$text__font-weight;
+		line-height				:	$text__line-height;
+		color					:	$text__color;
+	
+		/**
+		* Modifiers sizes
+		*/
+
+		@each $name, $value in $text__size {
+			&--#{$name} {
+				font-size: $value+px;
+			}
+		}
+		/**
+		* Modifiers colours
+		*/
+
+		@each $color in $text__colours {
+			&--#{$color} {
+				color: color(#{$color});
+			}
+		}
+		/**
+		* Modifiers weight
+		*/
+
+		@each $name, $value in $text__weight {
+			&--#{$name} {
+				font-weight: $value;
+			}
+		}
+		/**
+		* Modifiers others
+		*/
+		&--italic {
+			font-style: italic;
+		}
+		&--underline {
+			text-decoration: underline;
+		}
+		&--link {
+			&:hover, &:focus, &:active {
+				text-decoration: underline;
+			}
+		}
+	}
+} // END IF

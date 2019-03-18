@@ -1,0 +1,28 @@
+///
+/// SECTION component
+///
+/// Section of the repository
+///
+/// @access public
+/// @author WebLab Studio
+/// @group Component
+/// @name section
+/// @since version 1.0.0
+///
+.#{$setting__ns}section {
+	/**
+	 * Modifiers size
+	 */
+	&--w-980 {
+		max-width: 980px;
+	}
+	&--w-80 {
+		max-width: 80%;
+	}
+	/**
+	 * Modifiers others
+	 */
+	&--m-auto {
+		margin: 0 auto;
+	}
+}

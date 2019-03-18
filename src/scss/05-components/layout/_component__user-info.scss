@@ -1,0 +1,38 @@
+///
+/// USER-INFO component
+///
+/// User-info of the repository
+///
+/// @access public
+/// @author WebLab Studio
+/// @group Component
+/// @name User-info
+/// @since version 1.0.0
+///
+.#{$setting__ns}user-info {
+	height: 135px;
+	padding: 15px 15px;
+	background-image: url($setting__base-path-img + '/user-img-background.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+
+	&__img {
+		margin-bottom: 24px;
+		img {
+			@include border-radius(50%);
+		}
+	}
+	&__title {
+		display: block;
+		margin-bottom: 3px;
+		font-size: 16px;
+		color: color(white);
+		font-weight: 300;
+	}
+	&__subtitle {
+		display: block;
+		font-size: 12px;
+		color: color(white);
+		font-weight: 300;
+	}
+}

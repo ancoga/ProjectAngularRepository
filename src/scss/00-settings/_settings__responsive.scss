@@ -1,0 +1,37 @@
+///
+/// RESPONSIVE variable
+///
+/// Hold our breakpoint aliases and conditions in a list.
+///
+/// These can be invoked later on via the `media-query()` mixin found in `_tools.responsive`.
+///
+/// WARNING: Do not write anything here, if you want to make a change, please go to _config__project.scss file.
+/// @access public
+/// @author WebLab Studio
+/// @group Settings
+/// @name config responsive
+/// @see $media-query
+/// @since version 1.0.0
+///
+/// This makes de media's ready
+///
+/// WARNING: Do not write anything here, if you want to make a change, please go to _config__project.scss file.
+/// @group Settings
+/// @see config__project
+/// @type Map
+$breakpoints: (
+	"xs" 		"screen and (max-width: " + ($setting__responsive-sm - 1) + "px)",
+	"sm" 		"screen and (min-width: " + $setting__responsive-sm + "px) and (max-width: " + ($setting__responsive-md - 1) + "px)",
+	"md" 		"screen and (min-width: " + $setting__responsive-md + "px) and (max-width: " + ($setting__responsive-lg - 1) + "px)",
+	"lg" 		"screen and (min-width: " + $setting__responsive-lg + "px) and (max-width: " + ($setting__responsive-xl - 1) + "px)",
+	"xl"		"screen and (min-width: " + $setting__responsive-xl + "px)",
+	"mobile"	"screen and (max-width: " + ($setting__responsive-md - 1) + "px)",
+	"tablet"	"screen and (max-width: " + ($setting__responsive-lg - 1) + "px)",
+	"desktop"	"screen and (min-width: " + $setting__responsive-lg + "px)"
+) !default;
+///
+/// If we have included this file, set a variable to tell the rest of the
+/// framework that we have some responsive settings.
+/// @group Settings
+/// @type Boolean
+$setting__responsive-settings: true;

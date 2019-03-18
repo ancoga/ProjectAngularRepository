@@ -1,0 +1,21 @@
+///
+/// TRANSITION mixin
+///
+/// This mixin creates all compatibilities with transform property
+/// @access public
+/// @author WebLab Studio
+/// @example scss @include transition(all 1s ease-in-out);
+///		-webkit-transition: all 1s ease-in-out;
+///		-moz-transition: all 1s ease-in-out;
+///		-o-transition: all 1s ease-in-out;
+///		transition: all 1s ease-in-out;
+/// @group Tools
+/// @name transform
+/// @param {String} $value The value of the transition property.
+/// @since version 1.0.0
+///
+@mixin transition($value) {
+	-webkit-transition: $value;
+	-ms-transition: $value;
+	transition: $value;
+}

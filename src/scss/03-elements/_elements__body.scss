@@ -1,0 +1,13 @@
+///
+/// BODY element
+///
+/// Here we got the body styles
+///
+body {
+	position: relative;
+	font-family: $setting__font--default;
+	color: color(project-txt);
+	background-color: color(project-bg);
+	-webkit-text-size-adjust: 100%;
+	height: calc(100% - 75px);
+}

@@ -1,0 +1,83 @@
+@if $include__trump--padding{
+    /*------------------------------------
+     # TRUMP PADDING
+    ------------------------------------*/
+
+    @for $i from $setting__trumps-padding-init through $setting__trumps-padding-end{
+        $value : $i*$setting__trumps-padding-steps;
+/// Padding trump
+/// @access public
+/// @author Front-tech Team
+/// @group trumps
+/// @name .t-padding-#{$value}
+/// @see setting__trumps-padding-init
+/// @see setting__trumps-padding-steps
+/// @see setting__trumps-padding-end
+/// @since version 1.0.0
+
+        .t-padding-#{$value}{
+            padding: #{$value}px !important;
+        }
+
+/// Padding top trump
+/// @access public
+/// @author Front-tech Team
+/// @group trumps
+/// @name .t-padding-top-#{$value}
+/// @see setting__trumps-padding-init
+/// @see setting__trumps-padding-steps
+/// @see setting__trumps-padding-end
+/// @since version 1.0.0
+
+        .t-padding-top-#{$value}{
+            padding-top: #{$value}px !important;
+        }
+
+/// Padding right trump
+/// @access public
+/// @author Front-tech Team
+/// @group trumps
+/// @name .t-padding-right-#{$value}
+/// @see setting__trumps-padding-init
+/// @see setting__trumps-padding-steps
+/// @see setting__trumps-padding-end
+/// @since version 1.0.0
+
+        .t-padding-right-#{$value}{
+            padding-right: #{$value}px !important;
+        }
+
+/// Padding bottom trump
+/// @access public
+/// @author Front-tech Team
+/// @group trumps
+/// @name .t-padding-bottom-#{$value}
+/// @see setting__trumps-padding-init
+/// @see setting__trumps-padding-steps
+/// @see setting__trumps-padding-end
+/// @since version 1.0.0
+
+        .t-padding-bottom-#{$value}{
+            padding-bottom: #{$value}px !important;
+        }
+
+/// Padding left trump
+/// @access public
+/// @author Front-tech Team
+/// @group trumps
+/// @name .t-padding-left-#{$value}
+/// @see setting__trumps-padding-init
+/// @see setting__trumps-padding-steps
+/// @see setting__trumps-padding-end
+/// @since version 1.0.0
+
+        .t-padding-left-#{$value}{
+            padding-left: #{$value}px !important;
+        }
+    }
+
+    /*------------------------------------
+     # END TRUMP padding
+    ------------------------------------*/
+
+}// end if

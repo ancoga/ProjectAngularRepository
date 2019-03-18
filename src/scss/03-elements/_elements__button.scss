@@ -1,0 +1,13 @@
+///
+/// BUTTON element
+///
+/// Here we got the button styles
+///
+button {
+	border: 0;
+	background-color: transparent;
+	cursor: pointer;
+	&:hover,&:focus,&:active {
+		outline: 0;
+	}
+}

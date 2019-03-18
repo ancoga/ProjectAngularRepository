@@ -1,0 +1,137 @@
+///*-------------------------------------------------------------------------
+//   #SETTINGS CONFIG
+//--------------------------------------------------------------------------*/
+
+//	CONTENT THIS FILE:
+//		# NAMESPACE
+//		# CONFIG - FONTS
+//		# BASIC VALUE FOR PROJECT
+//		# HEADINGS | FONT-SIZE DEFAULT
+//		# CONFIG - RESPONSIVE TYPE AND MEDIAQUERIES 
+//		# INCLUDE OBJECTS
+//		# INCLUDE TRUMPS
+
+
+
+
+
+///*-------------------------------------------------------------------------
+//		# NAMESPACE
+//--------------------------------------------------------------------------*/
+$setting__ns				:	wl-;
+
+
+
+///*-----------------------------------------------------
+///		# CONFIG - FONTS
+///-----------------------------------------------------*/
+$setting__font--default				:	'Roboto', sans-serif;
+$setting__font--alternative			:	verdana;
+$setting__font--icons				:	'Material Icons';
+
+
+
+///*-------------------------------------------------------------------------
+//   	# BASIC VALUE FOR PROJECT
+//--------------------------------------------------------------------------*/
+
+$setting__base-font-family          :	$setting__font--default;
+$setting__base-font-size            :	14;
+$setting__base-line-height          :	$setting__base-font-size + 4;
+$setting__base-color                :	project-secondary;
+$setting__base-background-color     :	white;
+$setting__base-background-document  :	default-light;
+$setting__base-typography-color     :	project-tertiary;
+$setting__base-path-font            :	"../assets/fonts/";
+$setting__base-path-img             :	"../assets/img/";
+
+
+
+///*------------------------------------
+//		# HEADINGS | FONT-SIZE DEFAULT
+//------------------------------------*/
+$setting__h1		:	40 !default;
+$setting__h2		:	32 !default;
+$setting__h3		:	28 !default;
+$setting__h4		:	24 !default;
+$setting__h5		:	20 !default;
+$setting__h6		:	16 !default;
+$setting__display-1	:	96 !default;
+$setting__display-2	:	88 !default;
+$setting__display-3	:	72 !default;
+$setting__display-4	:	56 !default;
+
+
+
+///*-----------------------------------------------------
+///		# CONFIG - RESPONSIVE TYPE AND MEDIAQUERIES 
+///-----------------------------------------------------*/
+$setting__responsive-xs :	320;
+$setting__responsive-sm :	480;
+$setting__responsive-md :	768;
+$setting__responsive-lg :	1024;
+$setting__responsive-xl :	1280;
+
+
+
+
+///*-----------------------------------------------------
+///		# INCLUDE OBJECTS
+///-----------------------------------------------------*/
+// Include buttons
+$include__buttons: true !default;
+// Include titles
+$include__titles: true !default;
+// Include alerts
+$include__alerts: true !default;
+// Include form-control
+$include__form-control: true !default;
+// Include input
+$include__input: true !default;
+// Include checkbox
+$include__checkbox: true !default;
+// Include radio
+$include__radio: true !default;
+// Include breadcrumb
+$include__breadcrumb: true !default;
+// Include progressbar
+$include__progressbar: true !default;
+// Include text
+$include__text: true !default;
+// Include list
+$include__list: true !default;
+// Include infobx
+$include__infobox: true !default;
+// Include panel
+$include__panel: true !default;
+
+///*-----------------------------------------------------
+///		# INCLUDE TRUMPS
+///-----------------------------------------------------*/
+// Include trumps for float
+$include__trumps--float : true;
+
+// Trumps fs list
+$setting__trumps-fs : 12,16,18,24;
+
+// Include trump for hide in base to breakpoints
+$include__trumps--hide : true !default;
+
+// Include trump for margin
+$include__trump--margin : true !default;
+
+// Trumps margin steps
+	$setting__trumps-margin-init : 0;
+	$setting__trumps-margin-steps: 5;
+	$setting__trumps-margin-end : 10;
+
+// Include trump for padding
+$include__trump--padding : true !default;
+
+// Trumps padding steps
+	$setting__trumps-padding-init : 0;
+	$setting__trumps-padding-steps: 4;
+	$setting__trumps-padding-end : 36;
+
+// Include trump for text align
+$include__trump--text-align : true !default;

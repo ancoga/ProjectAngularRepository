@@ -1,0 +1,20 @@
+///
+/// ANIMATION mixin
+///
+/// This mixin creates all compatibilities with animation property
+/// @access public
+/// @author WebLab Studio
+/// @example scss @include animation(Gradient 15s ease infinite);
+///    -webkit-animation: Gradient 15s ease infinite;
+///    -moz-animation: Gradient 15s ease infinite;
+///    animation: Gradient 15s ease infinite;
+/// @group Tools
+/// @name animation
+/// @param {String} $value The value of the animation property.
+/// @since version 1.0.0
+///
+@mixin animation($value) {
+	-webkit-animation: $value;
+	-moz-animation: $value;
+	animation: $value;
+}

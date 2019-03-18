@@ -1,0 +1,38 @@
+///
+/// COLOR-PALETTE component
+///
+/// Palette to show the colors of the project
+///
+/// @access public
+/// @author WebLab Studio
+/// @group Component
+/// @name color-palette
+/// @since version 1.0.0
+///
+.#{$setting__ns}color-palette {
+	width: 255px;
+	margin-bottom: 15px;
+	margin-right: 15px;
+
+	&__item {
+		display: -ms-flexbox;
+		display: flex;
+		padding: 10px 15px;
+		margin-top: -1px;
+		border: 1px solid color(black,0.12);
+	}
+	&__name,
+	&__code {
+		font-size: 16px;
+		font-weight: 500;
+		opacity: 0.87;
+	}
+	&__code {
+		display: block;
+		margin-left: 15px;
+		text-align: right;
+		text-transform: uppercase;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+	}
+}

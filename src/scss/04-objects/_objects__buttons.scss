@@ -1,0 +1,111 @@
+/*-------------------------------------------------------------
+	#BUTTONS
+-----------------------------------------------------------------*/
+
+@if $include__buttons == true {
+
+
+	$buttons__display				:	inline-block					!default;
+	$buttons__border				:	1								!default;
+	$buttons__border-style			:	solid							!default;
+	$buttons__border-color			:	color(project-secondary)		!default;
+	$buttons__border-radius			:	2								!default;
+	$buttons__text-align			:	center							!default;
+	$buttons__white-space			:	nowrap							!default;
+	$buttons__vertical-align		:	middle							!default;
+	$buttons__padding-vertical		:	6								!default;
+	$buttons__padding-horizontal	:	14								!default;
+	$buttons__margin				:	3								!default;
+	$buttons__font-size				:	$setting__base-font-size		!default;
+	$buttons__font-weight			:	300								!default;
+	$buttons__color					:	white						  !default;
+	$buttons__background			:	color(primary)					!default;
+	$buttons__user-select			:	none							!default;
+	$buttons__cursor				:	pointer							!default;
+	$buttons__hover-transition		:	color .15s ease-in-out,
+										background-color .15s ease-in-out,
+										border-color .15s ease-in-out,
+										box-shadow .15s ease-in-out 	!default;
+	$buttons__colours				:	danger primary success warning info default darken;
+
+
+	.o-btn,
+	%btn {
+		display				:	$buttons__display;
+		margin				:	$buttons__margin+px;
+		padding				:	$buttons__padding-vertical+px$buttons__padding-horizontal+px;
+		font-size			:	$buttons__font-size+px;
+		line-height			:	($buttons__font-size + 8)+px;
+		font-weight			:	$buttons__font-weight;
+		color 				:	color($buttons__color);
+		text-align			:	$buttons__text-align;
+		white-space			:	$buttons__white-space;
+		vertical-align		:	$buttons__vertical-align;
+		border 				:	$buttons__border+px $buttons__border-style $buttons__border-color;
+		cursor				:	$buttons__cursor;
+		@include border-radius($buttons__border-radius+px);
+		@include transition($buttons__hover-transition);
+		@include user-select($buttons__user-select);
+
+		/**
+		 * Actions
+		 */
+
+		&:hover {
+			text-decoration: none;
+		}
+		&:active,
+		&:focus{
+			outline: none;
+		}
+
+		/**
+		 * Modifiers colors
+		 */
+
+		@each $color in $buttons__colours {
+			&--#{$color} {
+				color: color(white);
+				background-color: color(#{$color});
+				border-color: color(#{$color});
+				&:hover {
+					background-color: color(#{$color}-dark);
+					border-color: color(#{$color}-dark-1);
+				}
+				&:focus {
+					@include box-shadow(0 0 0 3px color(#{$color},0.5));
+				}
+
+				&:disabled {
+					background-color: color(#{$color},0.5);
+					border-color: color(#{$color}-dark,0.5);
+					cursor: not-allowed;
+				}
+			}
+		}
+
+		/**
+		 * Modifiers sizes
+		 */
+
+		&--big {
+			padding: 10px 20px;
+		}
+		&--small {
+			padding: 2px 10px;
+		}
+		&--xsmall {
+			padding: 0px 8px;
+			font-size: 12px;
+		}
+
+		/**
+		 * Modifiers display
+		 */
+
+		&--block {
+			display: block;
+			width: 100%;
+		}
+	}
+} // END IF

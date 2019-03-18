@@ -1,0 +1,62 @@
+/*-------------------------------------------------------------
+    #ALERTS
+-----------------------------------------------------------------*/
+
+@if $include__alerts==true {
+
+	$alerts__position				:	relative 			!default;
+	$alerts__padding-vertical		:	16 					!default;
+	$alerts__padding-horizontal		:	16 					!default;
+	$alerts__margin-bottom			:	16 					!default;
+	$alerts__border					:	0 					!default;
+	$alerts__border-style			:	solid 				!default;
+	$alerts__border-color			:	color(black)	  !default;
+	$alerts__border-radius			:	0 					!default;
+	$alerts__text-size				:	14 					!default;
+	$alerts__text-weight			:	300 				!default;
+	$alerts__text-color				:	white 			  !default;
+	$alerts__size-icon				:	26					!default;
+	$alerts__colours				:	danger primary success warning info default darken;
+
+	.o-alert,
+	%alert {
+		position		: $alerts__position;
+		padding			: $alerts__padding-vertical+px $alerts__padding-horizontal+px;
+		margin-bottom	: $alerts__margin-bottom+px;
+		border			: $alerts__border+px $alerts__border-style $alerts__border-color;
+		@include border-radius($alerts__border-radius+px);
+
+		&__text {
+			font-size		: $alerts__text-size+px;
+			font-weight		: $alerts__text-weight;
+			color			: color($alerts__text-color);
+		}
+		&__icon {
+			position: absolute;
+			top: 11px;
+			left: 16px;
+			font-size: $alerts__size-icon+px;
+			color: color(black, 0.2);
+		}
+
+		/**
+		 * Modifiers colors
+		 */
+
+		@each $color in $alerts__colours {
+			&--#{$color} {
+				color: color(#{$color});
+				background-color: color(#{$color});
+				border-color: color(#{$color}-dark-1);
+			}
+		}
+
+		/**
+		 * Modifiers others
+		 */
+
+		&--icon {
+			padding-left: 56px;
+		}
+	}
+}

@@ -1,0 +1,102 @@
+///*-------------------------------------------------------------------------
+//   # FRONT MODULES CONFIG
+//--------------------------------------------------------------------------*/
+//	CONTENT THIS FILE:
+//		# IMPORT FILE CONFIG SCSS
+//      # SETTINGS
+//		# TOOLS
+//      # GENERIC
+//		# BASE
+//		# OBJETCS
+//      # COMPONENTS
+//      # TRUMPS
+///*--------------------------------------------------------
+//    # IMPORT FILE CONFIG SCSS
+//----------------------------------------------------------*/
+@import '_config__project';
+//*--------------------------------------------------------
+//    # SETTINGS
+//----------------------------------------------------------*/
+@import '00-settings/_settings__colors';
+@import '00-settings/_settings__responsive';
+//*----------------------------------------------------------
+//    # TOOLS
+//----------------------------------------------------------*/
+@import '01-tools/_tools__animation';
+@import '01-tools/_tools__border-radius';
+@import '01-tools/_tools__box-shadow';
+@import '01-tools/_tools__colors';
+@import '01-tools/_tools__fonts';
+@import '01-tools/_tools__responsive';
+@import '01-tools/_tools__transform';
+@import '01-tools/_tools__transition';
+@import '01-tools/_tools__truncate';
+@import '01-tools/_tools__user-select';
+@import '01-tools/_tools__z-index';
+//*----------------------------------------------------------
+//     # PRIMENG
+// ----------------------------------------------------------*/
+@import "../../node_modules/primeng/resources/themes/nova-light/theme.css";
+@import "../../node_modules/primeng/resources/primeng.min.css";
+//*----------------------------------------------------------
+//     # GENERIC
+// ----------------------------------------------------------*/
+@import "02-generic/_generic__accessible";
+@import "02-generic/_generic__box-sizing";
+@import "02-generic/_generic__fonts";
+@import "02-generic/_generic__material-icons";
+@import "02-generic/_generic__placeholder";
+@import "02-generic/_generic__reset";
+@import "02-generic/_generic__scrollbar";
+//*----------------------------------------------------------
+//     # BASE
+// ----------------------------------------------------------*/
+@import '03-elements/_elements__body';
+@import '03-elements/_elements__button';
+@import '03-elements/_elements__headings';
+@import '03-elements/_elements__html';
+@import '03-elements/_elements__image';
+@import '03-elements/_elements__link';
+@import '03-elements/_elements__lists';
+//*----------------------------------------------------------
+//     # EXTERNAL
+// ----------------------------------------------------------*/
+// @import '_config__angular-material';
+// /*----------------------------------------------------------
+//     # OBJECTS
+// ----------------------------------------------------------*/
+@import '04-objects/_objects__alerts';
+@import '04-objects/_objects__breadcrumb';
+@import '04-objects/_objects__buttons';
+@import '04-objects/_objects__checkbox';
+@import '04-objects/_objects__form-control';
+@import '04-objects/_objects__infobox';
+@import '04-objects/_objects__input';
+@import '04-objects/_objects__list';
+@import '04-objects/_objects__panel';
+@import '04-objects/_objects__progressbar';
+@import '04-objects/_objects__radio';
+@import '04-objects/_objects__text';
+@import '04-objects/_objects__titles';
+// /*----------------------------------------------------------
+//     # COMPONENTS
+// ----------------------------------------------------------*/   
+@import '05-components/layout/_component__header';
+@import '05-components/layout/_component__main';
+@import '05-components/layout/_component__menu';
+@import '05-components/layout/_component__sidebar';
+@import '05-components/layout/_component__user-info';
+@import '05-components/layout/_component__website-dev';
+@import '05-components/repository/_component__color-palette';
+@import '05-components/repository/_component__section';
+@import '05-components/repository/_component__tech';
+@import '05-components/_component__progressbar';
+
+//*----------------------------------------------------------
+//     # TRUMPS
+// ----------------------------------------------------------*/
+@import '06-trumps/_trumps__float';
+@import '06-trumps/_trumps__hide';
+@import '06-trumps/_trumps__margin';
+@import '06-trumps/_trumps__padding';
+@import '06-trumps/_trumps__text-align';

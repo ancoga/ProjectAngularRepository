@@ -1,0 +1,43 @@
+
+
+@if $include__trumps--float {
+	/*------------------------------------
+		 # TRUMPS FLOAT
+	 ------------------------------------*/
+/// Float left trump
+/// @access public
+/// @author Front-tech Team
+/// @group trumps
+/// @name .t-float-left
+/// @example scss 
+/// .t-float-left
+/// @since version 1.0.0
+	.t-float-left {
+		float: left !important;
+	}
+/// Float right trump
+/// @access public
+/// @author Front-tech Team
+/// @group trumps
+/// @name .t-float-right
+/// @example scss 
+/// .t-float-right
+/// @since version 1.0.0
+	.t-float-right {
+		float: right !important;
+	}
+/// Float none trump
+/// @access public
+/// @author Front-tech Team
+/// @group trumps
+/// @name .t-float-none
+/// @example scss 
+/// .t-float-none
+/// @since version 1.0.0
+	.t-float-none {
+		float: none !important;
+	}
+	/*------------------------------------
+		 # END TRUMPS FLOAT
+	 ------------------------------------*/
+}

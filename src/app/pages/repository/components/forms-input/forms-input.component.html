@@ -1,0 +1,94 @@
+<section>
+	<h2 class="o-title o-title--h4 o-title--light t-margin-bottom-10">FORMS ELEMENTS</h2>
+	<div fxLayout="row wrap" fxLayoutGap="15px">
+		<article class="o-panel" fxFlex="1 1 calc(100% - 15px)">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">INPUTS</h3>
+			</header>
+			<div class="o-panel__container">
+				<form action="#" method="POST">
+					<fieldset>
+						<legend class="t-hide-accessible">Form description</legend>
+						<div fxLayout="row wrap" fxLayoutGap="15px">
+							<div fxFlex="1 1 calc((100% / 2) - 15px)">
+								<h4 class="o-title o-title--h6">Input type text</h4>
+								<div class="o-form-control">
+									<label class="o-form-control__label" for="example_name">Email</label>
+									<input class="o-form-control__input o-input" name="example_name" id="example_name" type="text" placeholder="email@gmail.com" />
+								</div>
+							</div>
+							<div fxFlex="1 1 calc((100% / 2) - 15px)">
+								<h4 class="o-title o-title--h6">Input type password</h4>
+								<div class="o-form-control">
+									<label class="o-form-control__label" for="example_pass">Password</label>
+									<input class="o-form-control__input o-input" name="example_pass" id="example_pass" type="password" placeholder="password"
+									 value="password" />
+								</div>
+							</div>
+						</div>
+						<div fxLayout="row wrap" fxLayoutGap="15px">
+							<div fxFlex="1 1 calc((100% / 2) - 15px)">
+								<h4 class="o-title o-title--h6">Input disabled</h4>
+								<div class="o-form-control">
+									<label class="o-form-control__label" for="example_disabled">Example</label>
+									<input class="o-form-control__input o-input" name="example_disabled" id="example_disabled" type="text"
+									 placeholder="Example" disabled />
+								</div>
+							</div>
+							<div fxFlex="1 1 calc((100% / 2) - 15px)">
+								<h4 class="o-title o-title--h6">Input readonly</h4>
+								<div class="o-form-control">
+									<label class="o-form-control__label" for="example_readonly">Example</label>
+									<input class="o-form-control__input o-input" name="example_readonly" id="example_readonly" type="text"
+									 placeholder="Example" readonly />
+								</div>
+							</div>
+						</div>
+						<div fxLayout="row wrap" fxLayoutGap="15px">
+							<div fxFlex="1 1 calc((100% / 2) - 15px)">
+								<h4 class="o-title o-title--h6">Input info</h4>
+								<div class="o-form-control o-form-control--info">
+									<label class="o-form-control__label" for="example_info">Info</label>
+									<input class="o-form-control__input o-input" name="example_info" id="example_info" type="text" placeholder="Example" />
+									<p class="o-form-control__msg">Info message</p>
+								</div>
+							</div>
+							<div fxFlex="1 1 calc((100% / 2) - 15px)">
+								<h4 class="o-title o-title--h6">Input invalid</h4>
+								<div class="o-form-control o-form-control--danger">
+									<label class="o-form-control__label" for="example_invalid">Invalid</label>
+									<input class="o-form-control__input o-input" name="example_invalid" id="example_invalid" type="text"
+									 placeholder="Example" />
+									<p class="o-form-control__msg">Invalid mesage</p>
+								</div>
+							</div>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</article>
+		<article class="o-panel" fxFlex="1 1 calc(100% - 15px)" *ngIf="false">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">INPUTS ADVANCE</h3>
+			</header>
+			<div class="o-panel__container">
+				<form action="#" method="POST">
+					<fieldset>
+						<legend class="t-hide-accessible">Form description</legend>
+					</fieldset>
+					<div fxLayout="column" fxLayoutGap="15px">
+						<div>
+							Input con label flotante
+						</div>
+						<div>
+							Input con boton de mostrar contraseña
+						</div>
+						<div>
+							Input con boton de submit
+						</div>
+					</div>
+				</form>
+			</div>
+		</article>
+	</div>
+</section>

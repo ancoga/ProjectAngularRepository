@@ -1,0 +1,117 @@
+/*-------------------------------------------------------------
+	#PANEL
+-----------------------------------------------------------------*/
+
+@if $include__panel == true {
+
+	.o-panel,
+	%panel {
+		position: relative;
+		display: block;
+		width: 100%;
+		min-height: 50px;
+		margin-bottom: 30px;
+		background-color: color(white);
+		@include box-shadow(0 2px 10px color(black,0.2));
+		@include border-radius(2px);
+		// Header
+		&__header {
+			position: relative;
+			padding: 20px 20px;
+			border-bottom: 1px solid color(gray-200);
+		}
+		&__title {
+			display: block;
+			padding-right: 50px;
+		}
+		&__subtitle {
+			display: block;
+			padding-right: 50px;
+			font-size: 12px;
+			font-weight: 300;
+			color: color(project-tertiary);
+		}
+		// Header: options
+		&__opts {
+			position: absolute;
+			top: 20px;
+			right: 10px;
+		}
+		&__opts-item {
+			position: relative;
+			display: inline-block;
+			.ui-menu.ui-menu-dynamic {
+				position: absolute;
+				top: 28px!important;
+				right: 0!important;
+				left: auto!important;
+			}
+		}
+		&__opts-btn {
+			padding: 0;
+			min-width: auto;
+			width: 28px;
+			height: 28px;
+			line-height: 1;
+			@include border-radius(50%);
+
+		}
+		&__opts-icon {
+			font-size: 22px;
+			color: color(project-tertiary);
+		}
+		// Container
+		&__container {
+			padding: 20px 20px;
+		}
+		&__txt {
+			margin-bottom: 10px;
+			font-size: 14px;
+			line-height: (14 + 6)+px
+		}
+		
+		/**
+		* Modifiers colors
+		*/
+		$colours: danger primary success warning info default;
+
+		@each $color in $colours {
+			&--header-#{$color} {
+				.o-panel__header,
+				%panel__header {
+					background-color: color(#{$color});
+				}
+				.o-panel__title,
+				%panel__title,
+				.o-panel__subtitle,
+				%panel__subtitle,
+				.o-panel__opts-icon,
+				%panel__opts-icon {
+					color: color(white);
+				}
+			}
+			&--#{$color} {
+				.o-panel__header,
+				%panel__header {
+					border-color: color(black,0.1);
+				}
+				.o-panel__header,
+				%panel__header,
+				.o-panel__container,
+				%panel__container {
+					background-color: color(#{$color});
+				}
+				.o-panel__title,
+				%panel__title,
+				.o-panel__subtitle,
+				%panel__subtitle,
+				.o-panel__opts-icon,
+				%panel__opts-icon,
+				.o-panel__txt,
+				%panel__txt {
+					color: color(white);
+				}
+			}
+		}
+	}
+}

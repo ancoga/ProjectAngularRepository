@@ -1,0 +1,22 @@
+///
+/// BOX-SIZING generic
+///
+/// add style box-sizing to all elements
+///
+/// @access public
+/// @author WebLab Studio
+/// @group Generic
+/// @name html
+/// @since version 1.0.0
+///
+html {
+	box-sizing: border-box;
+}
+
+* {
+	&,
+	&:before,
+	&:after {
+		box-sizing: inherit;
+	}
+}

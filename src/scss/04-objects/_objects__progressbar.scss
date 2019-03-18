@@ -1,0 +1,21 @@
+/*-------------------------------------------------------------
+	#ALERTS
+-----------------------------------------------------------------*/
+
+@if $include__progressbar == true {
+
+	$progressbar__position					:	fixed						!default;
+	$progressbar__top						:	0							!default;
+	$progressbar__left						:	0							!default;
+	$progressbar__width						:	100%						!default;
+	$progressbar__z-index					:	9999						!default;
+
+	.o-progressbar,
+	%progressbar {
+		position					:	$progressbar__position;
+		top							:	$progressbar__top;
+		left						:	$progressbar__left;
+		width						:	$progressbar__width;
+		z-index						:	$progressbar__z-index;
+	}
+}

@@ -1,0 +1,97 @@
+///
+/// MENU component
+///
+/// Menu of the repository
+///
+/// @access public
+/// @author WebLab Studio
+/// @group Component
+/// @name Menu
+/// @since version 1.0.0
+///
+.#{$setting__ns}menu {
+	overflow-y: scroll;
+	height: calc(100vh - 195px);
+
+	&__title {
+		display: block;
+		padding: 10px 15px;
+		font-size: 12px;
+		font-weight: bold;
+		color: color(gray-900);
+		background-color: color(gray-200);
+	}
+	&__item {
+		display: block;
+		width: 100%;
+	}
+	&__link {
+		position: relative;
+		display: block;
+		width: 100%;
+		padding: 16px 45px 16px 15px;
+		text-align: left;
+		&:hover, &:focus, &:active {
+			background-color: color(gray-200);
+		}
+		// Modifiers
+		&--active {
+			.#{$setting__ns}menu__link-icon,
+			.#{$setting__ns}menu__link-txt {
+				color: color(red-500);
+			}
+		}
+	}
+	&__link-icon {
+		display: inline-block;
+		color: color(gray-700);
+		vertical-align: middle;
+	}
+	&__link-txt {
+		margin-left: 10px;
+		vertical-align: middle;
+		font-weight: 500;
+		color: color(gray-900);
+	}
+	&__link-subtxt {
+		margin-left: 10px;
+		vertical-align: middle;
+		font-weight: 300;
+		color: color(gray-900);
+	}
+	&__icon {
+		position: absolute;
+		top: 50%;
+		right: 15px;
+		width: 16px;
+		height: 18px;
+		@include transform(translate(0, -50%));
+	}
+	&__icon-add,
+	&__icon-remove {
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: 16px;
+		color: color(project-tertiary);
+		@include transition(all 0.3s);
+		@include transform(scale(0));
+		&--active {
+			@include transform(scale(1));
+		}
+	}
+	// Submenu
+	&__submenu {
+		overflow: hidden;
+		max-height: 0;
+		@include transition(.3s cubic-bezier(.86,0,.07,1));
+		&--show {
+			max-height: 500px;
+			@include transition(.3s cubic-bezier(.86,0,.07,1));
+		}
+	}
+	&__submenu-item {
+		display: inline-block;
+		width: 50%;
+	}
+}

@@ -1,0 +1,11 @@
+<section class="wl-section wl-section--w-80 wl-section--m-auto">
+	<h2 class="o-title o-title--h4 o-title--light t-margin-bottom-10">PROJECT COLORS</h2>
+	<div fxLayout="row wrap" fxLayout.sm="column" fxLayoutAlign="start start">
+		<ul class="wl-color-palette wl-color-palette--3n" *ngFor="let item of listColors">
+			<li class="wl-color-palette__item" *ngFor="let color of item" [ngStyle]="{'background-color': color.code}">
+				<span class="wl-color-palette__name" [innerHTML]="color.name" [ngStyle]="{'color': color.text}"></span>
+				<span class="wl-color-palette__code" [innerHTML]="color.code" [ngStyle]="{'color': color.text}"></span>
+			</li>
+		</ul>
+	</div>
+</section>

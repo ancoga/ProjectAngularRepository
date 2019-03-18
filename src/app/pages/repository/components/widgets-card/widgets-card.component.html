@@ -1,0 +1,379 @@
+<section>
+	<h2 class="o-title o-title--h4 o-title--light t-margin-bottom-10">BASIC CARD</h2>
+	<div fxLayout="row" fxLayoutGap="15px">
+		<article class="o-panel">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">Basic Panel Title</h3>
+				<small class="o-panel__subtitle">Description text here...</small>
+				<ul class="o-panel__opts">
+					<li class="o-panel__opts-item">
+						<p-menu #menu1 [popup]="true" [model]="menuItems"></p-menu>
+						<button class="o-panel__opts-btn" (click)="menu1.toggle($event)">
+							<i class="o-panel__opts-icon material-icons material-icons">more_vert</i>
+						</button>
+					</li>
+				</ul>
+			</header>
+			<div class="o-panel__container">
+				<p class="o-panel__txt">
+					Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis
+					neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat.
+					Ridiculus nostra.
+				</p>
+			</div>
+		</article>
+		<article class="o-panel">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">Basic Panel Title</h3>
+				<small class="o-panel__subtitle">Description text here...</small>
+				<ul class="o-panel__opts">
+					<li class="o-panel__opts-item">
+						<button class="o-panel__opts-btn">
+							<i class="o-panel__opts-icon material-icons">mic</i>
+						</button>
+					</li>
+					<li class="o-panel__opts-item">
+						<p-menu #menu2 [popup]="true" [model]="menuItems"></p-menu>
+						<button class="o-panel__opts-btn" (click)="menu2.toggle($event)">
+							<i class="o-panel__opts-icon material-icons material-icons">more_vert</i>
+						</button>
+					</li>
+				</ul>
+			</header>
+			<div class="o-panel__container">
+				<p class="o-panel__txt">
+					Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis
+					neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat.
+					Ridiculus nostra.
+				</p>
+			</div>
+		</article>
+		<article class="o-panel">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">Basic Panel Title</h3>
+				<small class="o-panel__subtitle">Description text here...</small>
+				<ul class="o-panel__opts">
+					<li class="o-panel__opts-item">
+						<button class="o-panel__opts-btn">
+							<i class="o-panel__opts-icon material-icons">info_outline</i>
+						</button>
+					</li>
+					<li class="o-panel__opts-item">
+						<button class="o-panel__opts-btn">
+							<i class="o-panel__opts-icon material-icons">help_outline</i>
+						</button>
+					</li>
+				</ul>
+			</header>
+			<div class="o-panel__container">
+				<p class="o-panel__txt">
+					Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis
+					neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat.
+					Ridiculus nostra.
+				</p>
+			</div>
+		</article>
+	</div>
+</section>
+<section>
+	<h2 class="o-title o-title--h4 o-title--light t-margin-bottom-10">HEADER COLORED CARDS</h2>
+	<div fxLayout="row" fxLayoutGap="15px">
+		<article class="o-panel o-panel--header-danger">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">Danger Panel Title</h3>
+				<small class="o-panel__subtitle">Description text here...</small>
+				<ul class="o-panel__opts">
+					<li class="o-panel__opts-item">
+						<p-menu #menu3 [popup]="true" [model]="menuItems"></p-menu>
+						<button class="o-panel__opts-btn" (click)="menu3.toggle($event)">
+							<i class="o-panel__opts-icon material-icons material-icons">more_vert</i>
+						</button>
+					</li>
+				</ul>
+			</header>
+			<div class="o-panel__container">
+				<p class="o-panel__txt">
+					Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis
+					neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat.
+					Ridiculus nostra.
+				</p>
+			</div>
+		</article>
+		<article class="o-panel o-panel--header-primary">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">Primary Panel Title</h3>
+				<small class="o-panel__subtitle">Description text here...</small>
+				<ul class="o-panel__opts">
+					<li class="o-panel__opts-item">
+						<button class="o-panel__opts-btn">
+							<i class="o-panel__opts-icon material-icons">mic</i>
+						</button>
+					</li>
+					<li class="o-panel__opts-item">
+						<p-menu #menu4 [popup]="true" [model]="menuItems"></p-menu>
+						<button class="o-panel__opts-btn" (click)="menu4.toggle($event)">
+							<i class="o-panel__opts-icon material-icons material-icons">more_vert</i>
+						</button>
+					</li>
+				</ul>
+			</header>
+			<div class="o-panel__container">
+				<p class="o-panel__txt">
+					Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis
+					neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat.
+					Ridiculus nostra.
+				</p>
+			</div>
+		</article>
+		<article class="o-panel o-panel--header-success">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">Success Panel Title</h3>
+				<small class="o-panel__subtitle">Description text here...</small>
+				<ul class="o-panel__opts">
+					<li class="o-panel__opts-item">
+						<button class="o-panel__opts-btn">
+							<i class="o-panel__opts-icon material-icons">info_outline</i>
+						</button>
+					</li>
+					<li class="o-panel__opts-item">
+						<button class="o-panel__opts-btn">
+							<i class="o-panel__opts-icon material-icons">help_outline</i>
+						</button>
+					</li>
+				</ul>
+			</header>
+			<div class="o-panel__container">
+				<p class="o-panel__txt">
+					Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis
+					neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat.
+					Ridiculus nostra.
+				</p>
+			</div>
+		</article>
+	</div>
+	<div fxLayout="row" fxLayoutGap="15px">
+		<article class="o-panel o-panel--header-info">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">Info Panel Title</h3>
+				<small class="o-panel__subtitle">Description text here...</small>
+				<ul class="o-panel__opts">
+					<li class="o-panel__opts-item">
+						<p-menu #menu5 [popup]="true" [model]="menuItems"></p-menu>
+						<button class="o-panel__opts-btn" (click)="menu5.toggle($event)">
+							<i class="o-panel__opts-icon material-icons material-icons">more_vert</i>
+						</button>
+					</li>
+				</ul>
+			</header>
+			<div class="o-panel__container">
+				<p class="o-panel__txt">
+					Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis
+					neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat.
+					Ridiculus nostra.
+				</p>
+			</div>
+		</article>
+		<article class="o-panel o-panel--header-warning">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">Warning Panel Title</h3>
+				<small class="o-panel__subtitle">Description text here...</small>
+				<ul class="o-panel__opts">
+					<li class="o-panel__opts-item">
+						<button class="o-panel__opts-btn">
+							<i class="o-panel__opts-icon material-icons">mic</i>
+						</button>
+					</li>
+					<li class="o-panel__opts-item">
+						<p-menu #menu6 [popup]="true" [model]="menuItems"></p-menu>
+						<button class="o-panel__opts-btn" (click)="menu6.toggle($event)">
+							<i class="o-panel__opts-icon material-icons material-icons">more_vert</i>
+						</button>
+					</li>
+				</ul>
+			</header>
+			<div class="o-panel__container">
+				<p class="o-panel__txt">
+					Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis
+					neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat.
+					Ridiculus nostra.
+				</p>
+			</div>
+		</article>
+		<article class="o-panel o-panel--header-default">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">Default Panel Title</h3>
+				<small class="o-panel__subtitle">Description text here...</small>
+				<ul class="o-panel__opts">
+					<li class="o-panel__opts-item">
+						<button class="o-panel__opts-btn">
+							<i class="o-panel__opts-icon material-icons">info_outline</i>
+						</button>
+					</li>
+					<li class="o-panel__opts-item">
+						<button class="o-panel__opts-btn">
+							<i class="o-panel__opts-icon material-icons">help_outline</i>
+						</button>
+					</li>
+				</ul>
+			</header>
+			<div class="o-panel__container">
+				<p class="o-panel__txt">
+					Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis
+					neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat.
+					Ridiculus nostra.
+				</p>
+			</div>
+		</article>
+	</div>
+</section>
+<section>
+	<h2 class="o-title o-title--h4 o-title--light t-margin-bottom-10">ALL COLORED CARDS</h2>
+	<div fxLayout="row" fxLayoutGap="15px">
+		<article class="o-panel o-panel--danger">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">Danger Panel Title</h3>
+				<small class="o-panel__subtitle">Description text here...</small>
+				<ul class="o-panel__opts">
+					<li class="o-panel__opts-item">
+						<p-menu #menu7 [popup]="true" [model]="menuItems"></p-menu>
+						<button class="o-panel__opts-btn" (click)="menu7.toggle($event)">
+							<i class="o-panel__opts-icon material-icons material-icons">more_vert</i>
+						</button>
+					</li>
+				</ul>
+			</header>
+			<div class="o-panel__container">
+				<p class="o-panel__txt">
+					Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis
+					neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat.
+					Ridiculus nostra.
+				</p>
+			</div>
+		</article>
+		<article class="o-panel o-panel--primary">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">Primary Panel Title</h3>
+				<small class="o-panel__subtitle">Description text here...</small>
+				<ul class="o-panel__opts">
+					<li class="o-panel__opts-item">
+						<button class="o-panel__opts-btn">
+							<i class="o-panel__opts-icon material-icons">mic</i>
+						</button>
+					</li>
+					<li class="o-panel__opts-item">
+						<p-menu #menu8 [popup]="true" [model]="menuItems"></p-menu>
+						<button class="o-panel__opts-btn" (click)="menu.toggle($event)">
+							<i class="o-panel__opts-icon material-icons material-icons">more_vert</i>
+						</button>
+					</li>
+				</ul>
+			</header>
+			<div class="o-panel__container">
+				<p class="o-panel__txt">
+					Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis
+					neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat.
+					Ridiculus nostra.
+				</p>
+			</div>
+		</article>
+		<article class="o-panel o-panel--success">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">Success Panel Title</h3>
+				<small class="o-panel__subtitle">Description text here...</small>
+				<ul class="o-panel__opts">
+					<li class="o-panel__opts-item">
+						<button class="o-panel__opts-btn">
+							<i class="o-panel__opts-icon material-icons">info_outline</i>
+						</button>
+					</li>
+					<li class="o-panel__opts-item">
+						<button class="o-panel__opts-btn">
+							<i class="o-panel__opts-icon material-icons">help_outline</i>
+						</button>
+					</li>
+				</ul>
+			</header>
+			<div class="o-panel__container">
+				<p class="o-panel__txt">
+					Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis
+					neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat.
+					Ridiculus nostra.
+				</p>
+			</div>
+		</article>
+	</div>
+	<div fxLayout="row" fxLayoutGap="15px">
+		<article class="o-panel o-panel--info">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">Info Panel Title</h3>
+				<small class="o-panel__subtitle">Description text here...</small>
+				<ul class="o-panel__opts">
+					<li class="o-panel__opts-item">
+						<p-menu #menu9 [popup]="true" [model]="menuItems"></p-menu>
+						<button class="o-panel__opts-btn" (click)="menu9.toggle($event)">
+							<i class="o-panel__opts-icon material-icons material-icons">more_vert</i>
+						</button>
+					</li>
+				</ul>
+			</header>
+			<div class="o-panel__container">
+				<p class="o-panel__txt">
+					Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis
+					neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat.
+					Ridiculus nostra.
+				</p>
+			</div>
+		</article>
+		<article class="o-panel o-panel--warning">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">Warning Panel Title</h3>
+				<small class="o-panel__subtitle">Description text here...</small>
+				<ul class="o-panel__opts">
+					<li class="o-panel__opts-item">
+						<button class="o-panel__opts-btn">
+							<i class="o-panel__opts-icon material-icons">mic</i>
+						</button>
+					</li>
+					<li class="o-panel__opts-item">
+						<p-menu #menu10 [popup]="true" [model]="menuItems"></p-menu>
+						<button class="o-panel__opts-btn" (click)="menu10.toggle($event)">
+							<i class="o-panel__opts-icon material-icons material-icons">more_vert</i>
+						</button>
+					</li>
+				</ul>
+			</header>
+			<div class="o-panel__container">
+				<p class="o-panel__txt">
+					Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis
+					neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat.
+					Ridiculus nostra.
+				</p>
+			</div>
+		</article>
+		<article class="o-panel o-panel--default">
+			<header class="o-panel__header">
+				<h3 class="o-panel__title o-title o-title--h5 o-title--light">Default Panel Title</h3>
+				<small class="o-panel__subtitle">Description text here...</small>
+				<ul class="o-panel__opts">
+					<li class="o-panel__opts-item">
+						<button class="o-panel__opts-btn">
+							<i class="o-panel__opts-icon material-icons">info_outline</i>
+						</button>
+					</li>
+					<li class="o-panel__opts-item">
+						<button class="o-panel__opts-btn">
+							<i class="o-panel__opts-icon material-icons">help_outline</i>
+						</button>
+					</li>
+				</ul>
+			</header>
+			<div class="o-panel__container">
+				<p class="o-panel__txt">
+					Quis pharetra a pharetra fames blandit. Risus faucibus velit Risus imperdiet mattis
+					neque volutpat, etiam lacinia netus dictum magnis per facilisi sociosqu. Volutpat.
+					Ridiculus nostra.
+				</p>
+			</div>
+		</article>
+	</div>
+</section>

@@ -1,0 +1,57 @@
+///
+/// FONTS generic
+///
+/// Example for use @font-face
+///
+//	@include font-face([name-font],
+//		$setting__base-path-font+'[name-font]',
+//		[font-weight],
+//		[font-style],
+//		[type-font(eot | woff | svg | ttf)]
+//	);
+//
+@include font-face(Roboto,
+	$setting__base-path-font+'Roboto/Roboto-Thin',
+	100,
+	normal,
+	ttf
+);
+@include font-face(Roboto,
+	$setting__base-path-font+'Roboto/Roboto-Light',
+	300,
+	normal,
+	ttf
+);
+@include font-face(Roboto,
+	$setting__base-path-font+'Roboto/Roboto-Regular',
+	400,
+	normal,
+	ttf
+);
+@include font-face(Roboto,
+	$setting__base-path-font+'Roboto/Roboto-Medium',
+	500,
+	normal,
+	ttf
+);
+@include font-face(Roboto,
+	$setting__base-path-font+'Roboto/Roboto-Bold',
+	700,
+	normal,
+	ttf
+);
+@include font-face(Roboto,
+	$setting__base-path-font+'Roboto/Roboto-Black',
+	900,
+	normal,
+	ttf
+);
+
+// Material design
+
+@include font-face('Material Icons',
+	'../../node_modules/material-design-icons/iconfont/MaterialIcons-Regular',
+	400,
+	normal,
+	eot  woff  svg  ttf
+);

@@ -1,0 +1,139 @@
+/*-------------------------------------------------------------
+	#radio
+-----------------------------------------------------------------*/
+
+@if $include__radio==true {
+
+	$radio__display				:	block					!default;
+	$radio__width				:	100%					!default;
+	$radio__margin-bottom		:	8						!default;
+	$radio__size-icon			:	24						!default;
+	$radio__colours				:	danger primary success warning info	!default;
+
+	.o-radio,
+	%radio {
+		display: $radio__display;
+		width: $radio__width;
+		margin-bottom: $radio__margin-bottom+px;
+
+		&__ipt {
+			position: absolute;
+			height: 0;
+			width: 0;
+
+			&:focus {
+				+ .o-radio__label {
+					.o-radio__icon {
+						background: color(black,0.1);
+						border-color: color(primary);
+						@include box-shadow(0 0 0 3px color(primary,0.5));
+					}
+				}
+			}
+			&:checked + .o-radio__label > .o-radio__icon {
+				border: 12px solid color(primary);
+				animation: shrink-bounce 200ms cubic-bezier(.4, .0, .23, 1);
+				&:before {
+					content: "";
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					width: 10px;
+					height: 10px;
+					background-color: color(white);
+					@include border-radius(100%);
+					@include transform(translate(-50%,-50%));
+				}
+			}
+			&:disabled {
+				+ .o-radio__label,
+				+ %radio__label {
+					.o-radio__icon,
+					%radio__icon {
+						background: color(black,0.1);
+					}
+				}
+			}
+		}
+
+		&__label {
+			display: flex;
+			align-items: center;
+			cursor: pointer;
+			@include transition(color 250ms cubic-bezier(.4, .0, .23, 1));
+			
+			&:hover > .o-radio__icon {
+				background: color(black,0.1);
+			}
+		}
+
+		&__icon {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: ($radio__size-icon / 2)+px;
+			width: $radio__size-icon+px;
+			height: $radio__size-icon+px;
+			background: transparent;
+			border: 2px solid color(default);
+			cursor: pointer;
+			@include border-radius(50%);
+			@include transition(all 250ms cubic-bezier(.4, .0, .23, 1));
+		}
+
+		/**
+		* Modifiers colors
+		*/
+		
+		@each $color in $radio__colours {
+			&--#{$color} {
+				.o-radio__ipt,
+				%radio__ipt {
+					&:focus {
+						+ .o-radio__label,
+						+ %radio__label {
+							.o-radio__icon,
+							%radio__icon {
+								border-color: color(#{$color});
+								@include box-shadow(0 0 0 3px color(#{$color},0.5));
+							}
+						}
+					}
+					&:checked {
+						+ .o-radio__label,
+						+ %radio__label {
+							> .o-radio__icon,
+							> %radio__icon {
+								border: 12px solid color(#{$color});
+							}
+						}
+					}
+				}
+			}
+		}
+
+		/**
+		* Modifiers display
+		*/
+
+		&--inline-block {
+			display: inline-block;
+			width: auto;
+			margin-right: 15px;
+			vertical-align: top;
+		}
+	}
+}
+
+@keyframes shrink-bounce {
+	0% {
+		@include transform(scale(1));
+	}
+	33% {
+		@include transform(scale(.85));
+	}
+	100% {
+		@include transform(scale(1));
+	}
+}

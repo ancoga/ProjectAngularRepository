@@ -1,0 +1,83 @@
+/*-------------------------------------------------------------
+	#TITLES
+-----------------------------------------------------------------*/
+
+@if $include__titles == true {
+
+
+	$titles__font-family			:	$setting__base-font-family  !default;
+	$titles__font-weight			:	500                         !default;
+	$titles__color					:	color(project-txt)         !default;
+	$increment__line-height			:	8;
+	$titles__weight: (
+		thin	: 100,
+		light	: 300,
+		regular	: 400,
+		medium	: 500,
+		bold	: 700,
+		black	: 900
+	);
+	.o-title,
+	%title {
+		font-family				:	$titles__font-family;
+		font-weight				:	$titles__font-weight;
+		color					:	$titles__color;
+
+		/**
+		 * Modifiers size
+		 */
+
+		&--h1 {
+			font-size: $setting__h1+px;
+			line-height: ($setting__h1 + $increment__line-height)+px;
+		}
+		&--h2 {
+			font-size: $setting__h2+px;
+			line-height: ($setting__h2 + $increment__line-height)+px;
+		}
+		&--h3 {
+			font-size: $setting__h3+px;
+			line-height: ($setting__h3 + $increment__line-height)+px;
+		}
+		&--h4 {
+			font-size: $setting__h4+px;
+			line-height: ($setting__h4 + $increment__line-height)+px;
+		}
+		&--h5 {
+			font-size: $setting__h5+px;
+			line-height: ($setting__h5 + $increment__line-height)+px;
+		}
+		&--h6 {
+			font-size: $setting__h6+px;
+			line-height: ($setting__h6 + $increment__line-height)+px;
+		}
+		&--display-1 {
+			font-size: $setting__display-1+px;
+			line-height: ($setting__display-1 + $increment__line-height)+px;
+		}
+		&--display-2 {
+			font-size: $setting__display-2+px;
+			line-height: ($setting__display-2 + $increment__line-height)+px;
+		}
+		&--display-3 {
+			font-size: $setting__display-3+px;
+			line-height: ($setting__display-3 + $increment__line-height)+px;
+		}
+		&--display-4 {
+			font-size: $setting__display-4+px;
+			line-height: ($setting__display-4 + $increment__line-height)+px;
+		}
+
+		/**
+		 * Modifiers weight
+		 */
+
+		@each $name, $value in $titles__weight {
+			&--#{$name} {
+				font-weight: $value;
+			}
+		}
+
+	}
+	
+} // END IF

@@ -1,0 +1,11 @@
+///
+/// LIST element
+///
+/// This is the lists' style sheet
+///
+li {
+	> ul,
+	> ol {
+		margin-bottom 	:  	0;
+	}
+}

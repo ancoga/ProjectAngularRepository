@@ -1,0 +1,20 @@
+///
+/// TRANSFORM mixin
+///
+/// This mixin creates all compatibilities with transform property
+/// @access public
+/// @author WebLab Studio
+/// @example scss @include transform(translate(-50%,-50%));
+///    -webkit-transform: translate(-50%,-50%);
+///    -ms-transform: translate(-50%,-50%);
+///    transform: translate(-50%,-50%);
+/// @group Tools
+/// @name transform
+/// @param {String} $value The value of the transform property.
+/// @since version 1.0.0
+///
+@mixin transform($value) {
+	-webkit-transform: $value;
+	-ms-transform: $value;
+	transform: $value;
+}

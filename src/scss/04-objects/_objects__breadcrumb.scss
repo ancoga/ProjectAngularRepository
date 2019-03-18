@@ -1,0 +1,112 @@
+/*-------------------------------------------------------------
+	#breadcrumb
+-----------------------------------------------------------------*/
+
+@if $include__breadcrumb==true {
+
+	$breadcrumbs__colours				:	danger primary success warning info;
+
+	.o-breadcrumb,
+	%breadcrumb {
+		
+		&__list {
+			font-size: 0;
+		}
+		&__item {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+
+			&:before {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: 12px;
+				width: 6px;
+				height: 6px;
+				border: 1px solid color(project-tertiary);
+				border-bottom: 0;
+				border-left: 0;
+				@include transform(translate(0,-50%) rotate(45deg));
+			}
+			&:last-child {
+				.o-breadcrumb__txt,
+				%breadcrumb__txt,
+				.o-breadcrumb__icon,
+				%breadcrumb__icon {
+					color: color(project-tertiary);
+				}
+				&:before {
+					display: none;
+				}
+			}
+		}
+		&__icon {
+			display: inline-block;
+			margin-right: 5px;
+			font-size: 18px;
+			vertical-align: middle;
+		}
+		&__txt {
+			display: inline-block;
+			margin-right: 28px;
+			font-size: 12px;
+			color: color(project-txt);
+			vertical-align: middle;
+			&:hover, &:focus, &:active {
+				outline: 0;
+				color: color(project-txt);
+				text-decoration: underline;
+			}
+		}
+
+		/**
+		 * Modifiers colors
+		 */
+
+		@each $color in $breadcrumbs__colours {
+			&--#{$color} {
+				.o-breadcrumb__item,
+				%breadcrumb__item {
+					&:last-child {
+						.o-breadcrumb__txt,
+						%breadcrumb__txt {
+							font-weight: normal;
+						}
+					}
+				}
+				.o-breadcrumb__txt,
+				%breadcrumb__txt,
+				.o-breadcrumb__icon,
+				%breadcrumb__icon {
+					color: color(#{$color});
+					font-weight: bold;
+				}
+			}
+			&--bg-#{$color} {
+				padding: 12px 12px;
+				background-color: color(#{$color});
+				.o-breadcrumb__txt,
+				%breadcrumb__txt,
+				.o-breadcrumb__icon,
+				%breadcrumb__icon {
+					color: color(white);
+				}
+				.o-breadcrumb__item,
+				%breadcrumb__item {
+					&:before {
+						border-color: color(white);
+					}
+					&:last-child {
+						.o-breadcrumb__txt,
+						%breadcrumb__txt,
+						.o-breadcrumb__icon,
+						%breadcrumb__icon {
+							color: color(white);
+						}
+					}
+				}
+			}
+		}
+	}
+}

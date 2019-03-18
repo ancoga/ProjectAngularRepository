@@ -1,0 +1,21 @@
+///
+/// PROGRESSBAR component
+///
+/// Description example component
+///
+/// @access public
+/// @author WebLab Studio
+/// @group Component
+/// @name Progressbar
+/// @since version 1.0.0
+///
+.#{$setting__ns}progressbar {
+	@extend %progressbar;
+
+	.ui-progressbar {
+		height: 4px;
+		.ui-progressbar-value {
+			background-color: color(info-dark-1);
+		}
+	}
+}

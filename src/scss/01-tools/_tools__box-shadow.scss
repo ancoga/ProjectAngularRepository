@@ -1,0 +1,18 @@
+///
+/// BOX-SHADOW mixin
+///
+/// This mixin helps to develop box shadow styles
+/// @access public
+/// @author WebLab Studio
+/// @example scss @include box-shadow(10px);
+///     -webkit-box-shadow: 10px;
+///     box-shadow: 10px;
+/// @group Tools
+/// @name box-shadow
+/// @param {String} $value The value of the box-shadow property.
+/// @since version 1.0.0
+@mixin box-shadow($value) {
+	-webkit-box-shadow: $value;
+	-ms-box-shadow: $value;
+	box-shadow: $value;
+}

@@ -1,0 +1,38 @@
+/*-------------------------------------------------------------
+	#ALERTS
+-----------------------------------------------------------------*/
+
+@if $include__input == true {
+
+	$input__position					:	relative						!default;
+	$input__display						:	block							!default;
+	$input__width						:	100%							!default;
+	$input__height						:	38								!default;
+	$input__font-size					:	$setting__base-font-size		!default;
+	$input__color						:	color(project-txt)				!default;
+	$input__background					:	color(white)				  !default;
+	$input__hover-transition			:	border-color .15s ease-in-out,
+											box-shadow .15s ease-in-out		!default;
+	$input__border						:	2								!default;
+	$input__border-style				:	solid							!default;
+	$input__border-color				:	color(default)					!default;
+	$input__border-radius				:	4								!default;
+
+
+	.o-input,
+	%input {
+		position					:	$input__position;
+		display 					:	$input__display;
+		width						:	$input__width;
+		min-height					:	$input__height+px;
+		padding						:	6px 12px;
+		font-size					:	$input__font-size+px;
+		line-height					:	($input__font-size + 8)+px;
+		color						:	$input__color;
+		background-color			:	$input__background;
+		border						:	$input__border +px $input__border-style $input__border-color;
+		@include border-radius($input__border-radius +px);
+		@include transition($input__hover-transition);
+		resize: vertical;
+	}
+}
